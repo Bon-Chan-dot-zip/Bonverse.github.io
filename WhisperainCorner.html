@@ -9,11 +9,17 @@
       margin: 0;
       background-color: #031326;
       font-family: Arial, sans-serif;
-      object-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
     .navbar {
       display: flex;
       background-color: #172C42;
+      width: 100%;
+      position: fixed;
+      top: 0;
     }
     .navbar a {
       flex: 1;
@@ -28,28 +34,34 @@
     }
     .content {
       display: flex;
-      padding: 20px;
-      object-align: center;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding-top: 60px; /* Adjust for navbar height */
     }
     .big-box {
       width: 85%;
       height: 900px;
       background-color: #2F445C;
       color: white;
-      object-align: center;
       box-sizing: border-box;
       border: 1px solid #000;
       display: flex;
-      position: absolute;
+      flex-wrap: wrap;
+      justify-content: space-around;
       align-items: center;
-      justify-content: center;
+      position: relative;
+    }
+    .big-box img {
+      width: 25%;
+      height: auto;
     }
     .big-box-sub {
       width: 30%;
       height: 90%;
       background-color: #172C42;
       color: white;
-      object-align: center;
       margin-left: 20px;
       box-sizing: border-box;
       border: 1px solid #000;
@@ -64,15 +76,14 @@
   </div>
   <div class="content">
     <div class="big-box">
-      <img src="whisperainBraid.jpg" alt="" style= width:25%;height:25% >
-      <img src="whisperainChibi.jpg" alt="" style= width:25%;height:25% >
-      <img src="whisperainDetailed.png" alt="" style= width:25%;height:25% >
-      <img src="whisperainLight.jpg" alt="" style= width:25%;height:25% >
-      <img src="whisperainScratchart.jpg" alt="" style= width:25%;height:25% >
-      <img src="whisperainUmbrella.jpg" alt="" style= width:25%;height:25% >
-      <img src="whisperainDiamond.jpg" alt="" style= width:25%;height:25% >
-      <div class="big-box-sub">
-      </div>
+      <img src="whisperainBraid.jpg" alt="Image 1">
+      <img src="whisperainChibi.jpg" alt="Image 2">
+      <img src="whisperainDetailed.png" alt="Image 3">
+      <img src="whisperainLight.jpg" alt="Image 4">
+      <img src="whisperainScratchart.jpg" alt="Image 5">
+      <img src="whisperainUmbrella.jpg" alt="Image 6">
+      <img src="whisperainDiamond.jpg" alt="Image 7">
+      <div class="big-box-sub"></div>
     </div>
   </div>
 </body>
