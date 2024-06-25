@@ -47,29 +47,23 @@
       color: white;
       box-sizing: border-box;
       border: 1px solid #000;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 10px;
+      padding: 10px;
       position: relative;
     }
     .big-box img {
-      width: 25%;
+      width: 100%;
       height: auto;
-      margin: 10px;
     }
     .big-box-sub {
-      width: 30%;
-      height: 90%;
+      grid-column: span 2; /* Span two columns for a larger sub-box */
+      height: 100%;
       background-color: #172C42;
       color: white;
       box-sizing: border-box;
       border: 1px solid #000;
-      order: -1; /* Ensure the sub box appears in the center */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 10px;
     }
   </style>
 </head>
@@ -81,7 +75,6 @@
   </div>
   <div class="content">
     <div class="big-box">
-      <div class="big-box-sub">Sub Box</div>
       <img src="whisperainBraid.jpg" alt="Image 1">
       <img src="whisperainChibi.jpg" alt="Image 2">
       <img src="whisperainDetailed.png" alt="Image 3">
@@ -89,6 +82,7 @@
       <img src="whisperainScratchart.jpg" alt="Image 5">
       <img src="whisperainUmbrella.jpg" alt="Image 6">
       <img src="whisperainDiamond.jpg" alt="Image 7">
+      <div class="big-box-sub"></div>
     </div>
   </div>
 </body>
