@@ -48,23 +48,38 @@
       box-sizing: border-box;
       border: 1px solid #000;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 10px;
-      padding: 10px;
+      grid-template-columns: 1fr 2fr 1fr;
       position: relative;
     }
-    .big-box img {
-      width: 100%;
-      height: auto;
-    }
     .big-box-sub {
-      grid-column: span 1; /* Span two columns for a larger sub-box */
+      grid-column: 2;
       height: 100%;
       background-color: #172C42;
       color: white;
       box-sizing: border-box;
       border: 1px solid #000;
+      padding: 20px;
     }
+    .big-box img {
+      position: absolute;
+      width: 200px;
+      height: auto;
+      opacity: 0.8; /* Adjust for overlapping effect */
+    }
+    .big-box img:nth-child(1) { top: 20px; left: -100px; }
+    .big-box img:nth-child(2) { top: 120px; left: -50px; }
+    .big-box img:nth-child(3) { top: 220px; left: 0; }
+    .big-box img:nth-child(4) { top: 320px; left: -50px; }
+    .big-box img:nth-child(5) { top: 420px; left: -100px; }
+    .big-box img:nth-child(6) { top: 520px; left: -50px; }
+    .big-box img:nth-child(7) { top: 620px; left: 0; }
+    .big-box img:nth-child(8) { top: 20px; right: -100px; }
+    .big-box img:nth-child(9) { top: 120px; right: -50px; }
+    .big-box img:nth-child(10) { top: 220px; right: 0; }
+    .big-box img:nth-child(11) { top: 320px; right: -50px; }
+    .big-box img:nth-child(12) { top: 420px; right: -100px; }
+    .big-box img:nth-child(13) { top: 520px; right: -50px; }
+    .big-box img:nth-child(14) { top: 620px; right: 0; }
   </style>
 </head>
 <body>
@@ -75,6 +90,10 @@
   </div>
   <div class="content">
     <div class="big-box">
+      <div class="big-box-sub">
+        <!-- Place your text here -->
+        <p>This is the long column where text can be placed.</p>
+      </div>
       <img src="whisperainBraid.jpg" alt="Image 1">
       <img src="whisperainChibi.jpg" alt="Image 2">
       <img src="whisperainDetailed.png" alt="Image 3">
@@ -82,7 +101,13 @@
       <img src="whisperainScratchart.jpg" alt="Image 5">
       <img src="whisperainUmbrella.jpg" alt="Image 6">
       <img src="whisperainDiamond.jpg" alt="Image 7">
-      <div class="big-box-sub"></div>
+      <img src="whisperainBraid.jpg" alt="Image 8">
+      <img src="whisperainChibi.jpg" alt="Image 9">
+      <img src="whisperainDetailed.png" alt="Image 10">
+      <img src="whisperainLight.jpg" alt="Image 11">
+      <img src="whisperainScratchart.jpg" alt="Image 12">
+      <img src="whisperainUmbrella.jpg" alt="Image 13">
+      <img src="whisperainDiamond.jpg" alt="Image 14">
     </div>
   </div>
 </body>
