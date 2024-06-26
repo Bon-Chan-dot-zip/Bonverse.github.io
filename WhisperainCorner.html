@@ -9,17 +9,12 @@
       margin: 0;
       background-color: #031326;
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
     .navbar {
       display: flex;
       background-color: #172C42;
+      position: static; 
       width: 100%;
-      position: absolute;
-      top: 0;
     }
     .navbar a {
       flex: 1;
@@ -35,12 +30,11 @@
     .content {
       display: flex;
       justify-content: center;
-      width: 100%;
-      padding-top: 60px;
+      padding: 20px;
     }
     .big-box {
       width: 85%;
-      height: 1700px;
+      height: 1500px;
       background-color: #2F445C;
       color: white;
       box-sizing: border-box;
@@ -60,17 +54,17 @@
       z-index: 1;
     }
     .big-box img {
-      position: relative;
+      position: absolute;
       width: 350px;
       height: auto;
     }
-    .big-box img:nth-child(2) { top: 50px; left: -130px; }
-    .big-box img:nth-child(3) { top: 250px; right: -80px; }
-    .big-box img:nth-child(4) { top: 450px; left: -30px; }
-    .big-box img:nth-child(5) { top: 650px; right: -130px; }
-    .big-box img:nth-child(6) { top: 850px; left: -130px; }
-    .big-box img:nth-child(7) { top: 1050px; right: -30px; }
-    .big-box img:nth-child(8) { top: 1250px; left: -130px; }
+    .big-box img:nth-of-type(1) { top: 100px; left: -180px; }
+    .big-box img:nth-of-type(2) { top: 300px; right: -180px; }
+    .big-box img:nth-of-type(3) { top: 500px; left: -180px; }
+    .big-box img:nth-of-type(4) { top: 700px; right: -180px; }
+    .big-box img:nth-of-type(5) { top: 900px; left: -180px; }
+    .big-box img:nth-of-type(6) { top: 1100px; right: -180px; }
+    .big-box img:nth-of-type(7) { top: 1300px; left: -180px; }
   </style>
 </head>
 <body>
