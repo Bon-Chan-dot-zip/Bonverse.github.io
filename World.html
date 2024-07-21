@@ -52,7 +52,16 @@
       object-align: center;
       box-sizing: border-box;
       padding: 10 px; 
-   
+    }
+     .typewriter {
+      border-right: .15em solid #00ccff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: blink-caret .75s step-end infinite;
+    }
+     @keyframes blink-caret {
+     from, to { border-color: transparent }
+     50% { border-color: #00ccff; }
     }
   </style>
 </head>
@@ -66,10 +75,26 @@
     <div class="big-box">
       <div class="big-box-sub">
         <H1>World</H1>
-        <p> Hello, welcome to my worldbuilding project, name is currently a work-in-progress. </p>
-         <a href="Template.html">Home</a>
+        <p> class="typewriter" id="header-text" </p>
+         <a href="Template.html">Enter</a>
       </div>
     </div>
   </div>
+  <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const text = "Worldbuilding Wiki";
+            let index = 0;
+            const speed = 100; // Adjust typing speed (milliseconds)
+
+            function typeWriter() {
+                if (index < text.length) {
+                    document.getElementById("header-text").textContent += text.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+            typeWriter();
+        });
+    </script>
 </body>
 </html>
