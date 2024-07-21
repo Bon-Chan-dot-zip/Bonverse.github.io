@@ -82,18 +82,28 @@
   </div>
   <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const text =
-              " > Connecting to GaiaNet
-               > Connection interrupted
-               > Rebooting... ";
+            const text =[
+              " > Connecting to GaiaNet",
+              " > Connection interrupted",
+              " > Rebooting... ",
+                         ];
             let index = 0;
+            let line = 0;
             const speed = 50; // Adjust typing speed (milliseconds)
 
             function typeWriter() {
-                if (index < text.length) {
-                    document.getElementById("header-text").textContent += text.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, speed);
+                   if (line < text.length) {
+                    if (index < text[line].length) {
+                        document.getElementById("typewriter-text").innerHTML += text[line].charAt(index);
+                        index++;
+                        setTimeout(typeWriter, speed);
+                    } 
+                    else {
+                        document.getElementById("typewriter-text").innerHTML += "<br>";
+                        line++;
+                        index = 0;
+                        setTimeout(typeWriter, speed);
+                    }
                 }
             }
             typeWriter();
