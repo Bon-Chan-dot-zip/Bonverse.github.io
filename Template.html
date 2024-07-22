@@ -19,17 +19,10 @@
             text-align: center;
         }
 
-        .typewriter {
-            border-right: .15em solid #00ccff;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: blink-caret .75s step-end infinite;
-            display: inline-block;
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #00ccff; }
+        header h1 {
+            margin: 0;
+            color: #00ccff;
+            font-size: 2.5em;
         }
 
         nav ul {
@@ -56,8 +49,20 @@
 
         main {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .entry-header img {
+            max-width: 200px;
+            border: 2px solid #00ccff;
+            border-radius: 10px;
         }
 
         main section {
@@ -90,7 +95,7 @@
 </head>
 <body>
     <header>
-        <h1 class="typewriter" id="entry-title"></h1>
+        <h1>Wiki Entry: The Desolate Landscape</h1>
     </header>
 
     <nav>
@@ -104,7 +109,12 @@
     </nav>
 
     <main>
-        <section id="content">
+        <div class="entry-header">
+            <h2>The Desolate Landscape</h2>
+            <img src="image-placeholder.jpg" alt="The Desolate Landscape">
+        </div>
+
+        <section id="introduction">
             <h2>Introduction</h2>
             <p>This is where the entry content will go. You can provide detailed information about the topic here.</p>
         </section>
@@ -123,23 +133,5 @@
     <footer>
         <p>&copy; 2024 Worldbuilding Wiki</p>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const titleText = "Entry Title: The Desolate Landscape";
-            let index = 0;
-            const speed = 100; // Adjust typing speed (milliseconds)
-
-            function typeWriter() {
-                if (index < titleText.length) {
-                    document.getElementById("entry-title").textContent += titleText.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, speed);
-                }
-            }
-
-            typeWriter();
-        });
-    </script>
 </body>
 </html>
