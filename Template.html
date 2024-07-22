@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Entry</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .typewriter {
+            border-right: .15em solid #00ccff;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: blink-caret .75s step-end infinite;
+            display: inline-block;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ccff; }
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            color: #00ccff;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        main section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #252525;
+            border-radius: 10px;
+        }
+
+        main section h2 {
+            color: #00ccff;
+            font-size: 2em;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+            color: #f0f0f0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="typewriter" id="entry-title"></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#lore">Lore</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#technology">Technology</a></li>
+            <li><a href="#locations">Locations</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="content">
+            <h2>Introduction</h2>
+            <p>This is where the entry content will go. You can provide detailed information about the topic here.</p>
+        </section>
+
+        <section id="details">
+            <h2>Details</h2>
+            <p>Include more specific details, descriptions, and any other relevant information about the entry.</p>
+        </section>
+
+        <section id="additional-info">
+            <h2>Additional Information</h2>
+            <p>Provide any extra information, related topics, or references here.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Worldbuilding Wiki</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const titleText = "Entry Title: The Desolate Landscape";
+            let index = 0;
+            const speed = 100; // Adjust typing speed (milliseconds)
+
+            function typeWriter() {
+                if (index < titleText.length) {
+                    document.getElementById("entry-title").textContent += titleText.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        });
+    </script>
+</body>
+</html>
