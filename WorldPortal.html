@@ -97,11 +97,11 @@
             function typeWriter() {
                 if (line < text.length) {
                     if (index < text[line].length) {
-                        document.getElementById("entry-content").innerHTML += text[line].charAt(index);
+                        document.getElementById("typewriter-text").innerHTML += text[line].charAt(index);
                         index++;
                         setTimeout(typeWriter, speed);
                     } else {
-                        document.getElementById("entry-content").innerHTML += "<br>";
+                        document.getElementById("typewriter-text").innerHTML += "<br>";
                         line++;
                         index = 0;
                         setTimeout(typeWriter, speed);
@@ -117,7 +117,7 @@
                 link.href = "#href="Ferterraindex.html">Enter<";
                 link.textContent = "Read more about this topic";
                 link.style.color = "#00ccff";
-                document.getElementById("entry-content").appendChild(link);
+                document.getElementById("typewriter-text").appendChild(link);
             }
 
             typeWriter();
