@@ -75,7 +75,6 @@
     <div class="big-box">
       <div class="big-box-sub">
          <p class="typewriter" id="typewriter-text"></p>
-         <a href="Ferterraindex.html">Enter</a>
       </div>
     </div>
   </div>
@@ -93,21 +92,32 @@
                          ];
           let line = 0;
           let index = 0;
-           const speed = 100; 
-          
+          const speed = 100; 
+
             function typeWriter() {
                 if (line < text.length) {
                     if (index < text[line].length) {
-                        document.getElementById("typewriter-text").innerHTML += text[line].charAt(index);
+                        document.getElementById("entry-content").innerHTML += text[line].charAt(index);
                         index++;
                         setTimeout(typeWriter, speed);
                     } else {
-                        document.getElementById("typewriter-text").innerHTML += "<br>";
+                        document.getElementById("entry-content").innerHTML += "<br>";
                         line++;
                         index = 0;
                         setTimeout(typeWriter, speed);
                     }
                 }
+                else 
+                {
+                    showLink();
+                }
+            }
+            function showLink() {
+                const link = document.createElement("a");
+                link.href = "#href="Ferterraindex.html">Enter<";
+                link.textContent = "Read more about this topic";
+                link.style.color = "#00ccff";
+                document.getElementById("entry-content").appendChild(link);
             }
 
             typeWriter();
