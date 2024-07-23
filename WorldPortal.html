@@ -75,8 +75,6 @@
     <div class="big-box">
       <div class="big-box-sub">
             <div class="entry-content" id="entry-content">
-                <h2>The Desolate Landscape</h2>
-                <!-- Content will be typed here -->
             </div>
         </div>
       </div>
@@ -85,15 +83,19 @@
   <script>
         document.addEventListener("DOMContentLoaded", function() {
             const text = [
-                "This is where the entry content will go. You can provide detailed information about the topic here. ",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. ",
-                "Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Further descriptions, elaborations, and any other relevant information about the entry can be added here. ",
-                "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. ",
-                "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+                " > Calling to server...",
+                " > Connecting to GaiaNet...",
+                " > Connection Established",
+                " > WARNING: Unrecognized device, login required",
+                " > Username: *******",
+                " > Password: *****",
+                " > Credentials verified",
+                " > Welcome, Guest",
+                " > Opening gateway..."
             ];
             let line = 0;
             let index = 0;
-            const speed = 50; // Adjust typing speed (milliseconds)
+            const speed = 50;  
 
             function typeWriter() {
                 if (line < text.length) {
