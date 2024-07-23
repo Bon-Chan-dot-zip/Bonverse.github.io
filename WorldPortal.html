@@ -32,9 +32,9 @@
       justify-content: center;
     }
    .big-box {
-      width: 75%;
-      height: 780px;
-      background-color: #FFC107;
+      width: 55%;
+      height: 450px;
+      background-color: #0066FF;
       color: white;
       object-align: center;
       box-sizing: border-box;
@@ -74,8 +74,7 @@
   <div class="content">
     <div class="big-box">
       <div class="big-box-sub">
-        <H1>World</H1>
-        <p class="typewriter" id="typewriter-text"></p>
+         <p class="typewriter" id="typewriter-text"></p>
          <a href="Ferterraindex.html">Enter</a>
       </div>
     </div>
@@ -92,18 +91,17 @@
               " > Welcome, Guest ",
               " > Opening Gateway." 
                          ];
-            let index = 0;
-            let line = 0;
-            const speed = 50; 
-
+          let line = 0;
+          let index = 0;
+           const speed = 100; 
+          
             function typeWriter() {
-                   if (line < text.length) {
+                if (line < text.length) {
                     if (index < text[line].length) {
                         document.getElementById("typewriter-text").innerHTML += text[line].charAt(index);
                         index++;
                         setTimeout(typeWriter, speed);
-                    } 
-                    else {
+                    } else {
                         document.getElementById("typewriter-text").innerHTML += "<br>";
                         line++;
                         index = 0;
@@ -111,6 +109,7 @@
                     }
                 }
             }
+
             typeWriter();
         });
     </script>
