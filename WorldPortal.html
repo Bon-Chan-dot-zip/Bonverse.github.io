@@ -74,50 +74,50 @@
   <div class="content">
     <div class="big-box">
       <div class="big-box-sub">
-         <p class="typewriter" id="typewriter-text"></p>
+            <div class="entry-content" id="entry-content">
+                <h2>The Desolate Landscape</h2>
+                <!-- Content will be typed here -->
+            </div>
+        </div>
       </div>
     </div>
   </div>
   <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const text =[
-              " > Connecting to GaiaNet",
-              " > Connection successful",
-              " > Verifying Credentials...",
-              " > Username: *******",
-              " > Password: *****",
-              " > Credentials verified ",
-              " > Welcome, Guest ",
-              " > Opening Gateway." 
-                         ];
-          let line = 0;
-          let index = 0;
-          const speed = 100; 
+            const text = [
+                "This is where the entry content will go. You can provide detailed information about the topic here. ",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. ",
+                "Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Further descriptions, elaborations, and any other relevant information about the entry can be added here. ",
+                "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. ",
+                "Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo."
+            ];
+            let line = 0;
+            let index = 0;
+            const speed = 50; // Adjust typing speed (milliseconds)
 
             function typeWriter() {
                 if (line < text.length) {
                     if (index < text[line].length) {
-                        document.getElementById("typewriter-text").innerHTML += text[line].charAt(index);
+                        document.getElementById("entry-content").innerHTML += text[line].charAt(index);
                         index++;
                         setTimeout(typeWriter, speed);
                     } else {
-                        document.getElementById("typewriter-text").innerHTML += "<br>";
+                        document.getElementById("entry-content").innerHTML += "<br>";
                         line++;
                         index = 0;
                         setTimeout(typeWriter, speed);
                     }
-                }
-                else 
-                {
+                } else {
                     showLink();
                 }
             }
+
             function showLink() {
                 const link = document.createElement("a");
-                link.href = "#href="Ferterraindex.html">Enter<";
+                link.href = "#Ferterraindex.html";
                 link.textContent = "Read more about this topic";
                 link.style.color = "#00ccff";
-                document.getElementById("typewriter-text").appendChild(link);
+                document.getElementById("entry-content").appendChild(link);
             }
 
             typeWriter();
