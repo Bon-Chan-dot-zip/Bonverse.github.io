@@ -91,7 +91,8 @@
                 " > Password: *****",
                 " > Credentials verified",
                 " > Welcome, Guest",
-                " > Opening gateway..."
+                " > Opening gateway...",
+                " ".
             ];
             let line = 0;
             let index = 0;
@@ -117,7 +118,7 @@
             function showLink() {
                 const link = document.createElement("a");
                 link.href = "#Ferterraindex.html";
-                link.textContent = "Read more about this topic";
+                link.textContent = ">Enter<";
                 link.style.color = "#00ccff";
                 document.getElementById("entry-content").appendChild(link);
             }
