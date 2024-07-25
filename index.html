@@ -111,7 +111,16 @@
       <div class="small-box">
       <img src="pfp.jpg" alt="A person wearing a cat-like hat with a caption reading its all so tiresome" style= padding:10px;width:100%;height:100%;object-fit:fill;>
       </div>
-      <div class="long-box"></div>
+      <div class="long-box">
+        <script>
+          fetch('news.md')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('news-box').innerHTML = marked(data);
+            });
+         </script>
+         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      </div>
     </div>
     <div class="big-box">
       <div class="big-box-sub">
